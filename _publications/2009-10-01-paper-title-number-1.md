@@ -1,14 +1,16 @@
 ---
-title: "Paper Title Number 1"
+title: "An integrated defect detection method based on context encoder and perception-enhanced aggregation for cylinder bores"
 collection: publications
 category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://academicpages.github.io/files/paper1.pdf'
-bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+date: 2025-01-01
+venue: "Journal / Conference Name"
+authors: "Xujie He, Jing Jin, Duo Chen, Yiyuan Feng"
+excerpt: "1–2 句简介（两三行以内最好）。"
+paperurl: "/files/CBDetector.pdf"
+codeurl: "https://github.com/xxx" # 可选
+videourl: "https://youtube.com/xxx" # 可选
+slidesurl: "/files/your_slides.pdf" # 可选
+header:
+teaser: "pubs/your_thumb.jpg" # 对应图片路径 /images/pubs/your_thumb.jpg
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
