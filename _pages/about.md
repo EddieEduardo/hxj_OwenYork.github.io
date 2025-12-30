@@ -8,10 +8,7 @@ redirect_from:
   - /about.html
 header:
   overlay_image: /images/banner.png
-  overlay_filter: 0.35
-  overlay_color: "#000"
-  text_color: "#fff"
-  show_overlay_excerpt: false
+  overlay_filter: rgba(0, 0, 0, 0.25)
 ---
 
 
