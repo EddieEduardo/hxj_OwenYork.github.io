@@ -1,0 +1,13 @@
+---
+title: "An integrated ship segmentation method based on discriminator and extractor"
+collection: publications
+category: manuscripts
+date: 2020-12-01
+venue: "Image and Vision Computing"
+authors: "Wen Zhang, Xujie He, Wanyi Li, Zhi Zhang, Yongkang Luo, Li Su, Peng Wang"
+excerpt: "Multiple Ship Semantic Segmentation"
+paperurl: "/files/ShiSeg.pdf"
+teaser_poster: "/images/pubs/ShiSeg.png"
+header:
+  teaser: "pubs/ShiSeg.png"
+---
