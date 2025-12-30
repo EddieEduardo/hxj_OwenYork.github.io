@@ -10,6 +10,7 @@ paperurl: "/files/CBDetector.pdf"
 codeurl: "https://github.com/xxx" # 可选
 videourl: "https://youtube.com/xxx" # 可选
 slidesurl: "/files/your_slides.pdf" # 可选
+teaser_video: "/images/pubs/CBDetector.mp4"
 header:
   teaser: "pubs/CBDetector.jpg" # 对应图片路径
 ---
