@@ -9,7 +9,10 @@
 <div class="pub-card">
   {% if post.teaser_video %}
     <div class="pub-card__thumb">
-      <video class="pub-card__video" autoplay muted loop playsinline preload="metadata">
+      <video class="pub-card__video"
+             autoplay muted loop playsinline
+             preload="none"
+             poster="{{ post.teaser_poster | default: teaser | default: '/images/500x300.png' | prepend: base_path }}">
         <source src="{{ post.teaser_video | prepend: base_path }}" type="video/mp4">
       </video>
     </div>
