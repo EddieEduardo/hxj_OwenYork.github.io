@@ -111,3 +111,14 @@
   max-width:160px !important;
   height:auto !important;
 }
+
+/* Make homepage hero taller */
+.page__hero--overlay{
+  min-height: 900px;   /* 你要 3 倍高度，先给 900；不够就 1000~1200 */
+}
+
+.page__hero--overlay .wrapper{
+  padding-top: 160px;  /* 文字垂直位置：越大越往下 */
+  padding-bottom: 160px;
+}
+
