@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  overlay_image: https://eddieeduardo.github.io/images/banner.png
+  overlay_image: "{{ base_path }}/images/banner.png"
   overlay_filter: rgba(0, 0, 0, 0.25)
 ---
 
