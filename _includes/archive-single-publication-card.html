@@ -6,16 +6,60 @@
   {% assign teaser = nil %}
 {% endif %}
 
+{%- comment -%}
+fallback_poster 优先级：
+1) post.teaser_poster（绝对路径 /images/...）
+2) post.header.teaser（pubs/xxx.jpg -> /images/pubs/xxx.jpg）
+{%- endcomment -%}
+{% assign fallback_poster = nil %}
+{% if post.teaser_poster %}
+  {% assign fallback_poster = post.teaser_poster | prepend: base_path %}
+{% elsif teaser %}
+  {% if teaser contains "://" %}
+    {% assign fallback_poster = teaser %}
+  {% else %}
+    {% assign fallback_poster = teaser | prepend: "/images/" | prepend: base_path %}
+  {% endif %}
+{% endif %}
+
 <div class="pub-card">
-  {% if post.teaser_video %}
+
+  {%- comment -%} Case A: multiple videos (stacked) {%- endcomment -%}
+  {% if post.teaser_videos %}
+    <div class="pub-card__thumb pub-card__thumb--stack">
+      {% for v in post.teaser_videos %}
+        {% assign v_src = v.src | default: v %}
+        {% assign v_poster = v.poster %}
+
+        <video class="pub-card__video"
+               autoplay muted loop playsinline
+               {% if v_poster %}
+                 preload="none" poster="{{ v_poster | prepend: base_path }}"
+               {% elsif fallback_poster %}
+                 preload="none" poster="{{ fallback_poster }}"
+               {% else %}
+                 preload="metadata"
+               {% endif %}>
+          <source src="{{ v_src | prepend: base_path }}" type="video/mp4">
+        </video>
+      {% endfor %}
+    </div>
+
+  {%- comment -%} Case B: single video {%- endcomment -%}
+  {% elsif post.teaser_video %}
     <div class="pub-card__thumb">
       <video class="pub-card__video"
              autoplay muted loop playsinline
-             preload="none"
-             poster="{{ post.teaser_poster | default: teaser | default: '/images/500x300.png' | prepend: base_path }}">
+             {% if fallback_poster %}
+               preload="none" poster="{{ fallback_poster }}"
+             {% else %}
+               preload="metadata"
+             {% endif %}>
         <source src="{{ post.teaser_video | prepend: base_path }}" type="video/mp4">
       </video>
     </div>
+
+  {%- comment -%} Case C: image only {%- endcomment -%}
   {% elsif teaser %}
     <div class="pub-card__thumb">
       <img src=
