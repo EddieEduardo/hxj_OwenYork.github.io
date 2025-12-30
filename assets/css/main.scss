@@ -1,48 +1,4 @@
----
----
-
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
-
-@import
-    "vendor/breakpoint/breakpoint",
-
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
-
-/* Publications cards (thumbnail + text) */
+/* Publications cards (thumbnail/video on the left + text on the right) */
 .pub-card{
   display:flex;
   gap:16px;
@@ -51,19 +7,23 @@
 }
 
 .pub-card__thumb{
-  flex:0 0 190px;
-  max-width:190px;
-  display:block;
+  flex:0 0 220px;     /* 左侧宽度：你可以改 180~260 */
+  max-width:220px;
 }
 
-.pub-card__thumb img{
+.pub-card__thumb img,
+.pub-card__video{
   width:100%;
-  height:auto;
+  height:140px;       /* 左侧媒体高度：建议 120~160 */
+  object-fit:cover;   /* 关键：裁切填充，避免撑爆布局 */
   border-radius:8px;
   display:block;
 }
 
-.pub-card__body{ flex:1; min-width:0; }
+.pub-card__body{
+  flex:1;
+  min-width:0;
+}
 
 .pub-card__title{
   font-weight:700;
@@ -77,15 +37,10 @@
 .pub-card__links{ margin-bottom:8px; }
 .pub-card__excerpt{ line-height:1.45; }
 
+/* Mobile */
 @media (max-width: 700px){
   .pub-card{ flex-direction:column; }
   .pub-card__thumb{ max-width:100%; flex-basis:auto; }
+  .pub-card__thumb img,
+  .pub-card__video{ height:auto; }
 }
-
-.pub-card__video{
-  width:100%;
-  height:auto;
-  border-radius:8px;
-  display:block;
-}
-
