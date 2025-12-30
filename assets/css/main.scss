@@ -69,14 +69,13 @@
   border-radius:0 !important;
 }
 
-/* NEW: stacked mode (only for the one paper with two videos) */
+/* stacked mode (only for the one paper with two videos) */
 .pub-card__thumb--stack{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:14px; /* 间隙更大一点 */
 }
 
-/* NEW: keep each stacked video the SAME height as normal videos */
 .pub-card__thumb--stack video{
   height:140px !important;
 }
@@ -100,8 +99,6 @@
   .pub-card__thumb{ max-width:100%; flex-basis:auto; }
   .pub-card__thumb img,
   .pub-card__thumb video{ height:auto !important; }
-
-  /* NEW: stacked videos also become auto height on mobile */
   .pub-card__thumb--stack video{ height:auto !important; }
 }
 
@@ -112,28 +109,33 @@
   height:auto !important;
 }
 
-/* Make homepage hero taller */
-.page__hero--overlay{
-  min-height: 900px;   /* 你要 3 倍高度，先给 900；不够就 1000~1200 */
-}
+/* =========================
+   Custom: Homepage Hero
+   ========================= */
 
-.page__hero--overlay .wrapper{
-  padding-top: 160px;  /* 文字垂直位置：越大越往下 */
-  padding-bottom: 160px;
-}
-
-/* Center hero title horizontally & vertically */
+/* 1) hero高度：约 3 倍 */
 .page__hero--overlay{
+  min-height: 900px;
   display:flex;
-  align-items:center;     /* 垂直居中 */
+  align-items:center;        /* 垂直居中 */
+  justify-content:center;    /* 水平居中（容器级） */
 }
 
+/* 2) 去掉默认 padding 推动，改为真正居中 */
 .page__hero--overlay .wrapper{
   width:100%;
+  text-align:center;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
+/* 3) 标题更大、更醒目 */
 .page__hero--overlay .page__title{
   width:100%;
-  text-align:center;      /* 水平居中 */
+  margin: 0 !important;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  text-shadow: 0 3px 18px rgba(0,0,0,0.45);
 }
-
