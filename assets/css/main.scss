@@ -1,4 +1,51 @@
-/* Publications cards: left media + right text (robust version) */
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+ * sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+
+@import
+  "vendor/breakpoint/breakpoint",
+
+  "themes",
+  "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+  "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+  "include/mixins",
+  "vendor/susy/susy",
+
+  "layout/reset",
+  "layout/base",
+
+  "include/utilities",
+  "layout/tables",
+  "layout/buttons",
+  "layout/notices",
+  "layout/masthead",
+  "layout/navigation",
+  "layout/footer",
+  "syntax",
+
+  "layout/forms",
+
+  "layout/page",
+  "layout/archive",
+  "layout/sidebar",
+  "layout/json_cv",
+
+  "vendor/font-awesome/fontawesome",
+  "vendor/font-awesome/solid",
+  "vendor/font-awesome/brands"
+;
+
+/* =========================
+   Custom: Publications card
+   ========================= */
+
 .pub-card{
   display:flex;
   gap:16px;
@@ -7,26 +54,22 @@
 }
 
 .pub-card__thumb{
-  flex:0 0 220px;   /* 左侧宽度 */
+  flex:0 0 220px;
   max-width:220px;
-  overflow:hidden;  /* 关键：防止媒体溢出撑爆布局 */
+  overflow:hidden;
   border-radius:8px;
 }
 
-/* 同时约束 img 和 video，且用 !important 抵抗全局样式覆盖 */
 .pub-card__thumb img,
 .pub-card__thumb video{
   width:100% !important;
-  height:140px !important;     /* 左侧媒体高度 */
-  object-fit:cover !important; /* 裁切填充 */
+  height:140px !important;
+  object-fit:cover !important;
   display:block !important;
-  border-radius:0 !important;  /* 圆角交给容器 .pub-card__thumb */
+  border-radius:0 !important;
 }
 
-.pub-card__body{
-  flex:1;
-  min-width:0;
-}
+.pub-card__body{ flex:1; min-width:0; }
 
 .pub-card__title{
   font-weight:700;
@@ -40,10 +83,16 @@
 .pub-card__links{ margin-bottom:8px; }
 .pub-card__excerpt{ line-height:1.45; }
 
-/* Mobile */
 @media (max-width: 700px){
   .pub-card{ flex-direction:column; }
   .pub-card__thumb{ max-width:100%; flex-basis:auto; }
   .pub-card__thumb img,
   .pub-card__thumb video{ height:auto !important; }
+}
+
+/* Optional safety: cap avatar size */
+.author__avatar img{
+  width:160px !important;
+  max-width:160px !important;
+  height:auto !important;
 }
