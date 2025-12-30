@@ -81,3 +81,11 @@
   .pub-card{ flex-direction:column; }
   .pub-card__thumb{ max-width:100%; flex-basis:auto; }
 }
+
+.pub-card__video{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  display:block;
+}
+
