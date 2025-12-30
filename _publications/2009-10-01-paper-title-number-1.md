@@ -2,7 +2,7 @@
 title: "An integrated defect detection method based on context encoder and perception-enhanced aggregation for cylinder bores"
 collection: publications
 category: manuscripts
-date: 2025-01-01
+date: 2024
 venue: "*Journal of Manufacturing Processes*"
 authors: "Xujie He, Jing Jin, Duo Chen, Yiyuan Feng"
 excerpt: "1–2 句简介（两三行以内最好）。"
