@@ -34,12 +34,15 @@ Foundation models (multi-modality foundation models), open-set recognition, comp
 
 ## Honors and Awards
 
-Silver Award, “CCB Cup” China International College Students’ Innovation Competition, 2025.
-National Scholarship (Ph.D.), Ministry of Education of P.R. China, 2024.
-HIT Outstanding Student (Moral Cultivation & Virtue) Award, Harbin Institute of Technology, 2024.
-National Scholarship (M.S.), Ministry of Education of P.R. China, 2020.
-National Encouragement Scholarship, , Ministry of Education of P.R. China, 2014.
-National Encouragement Scholarship, , Ministry of Education of P.R. China, 2014.
-National Encouragement Scholarship, , Ministry of Education of P.R. China, 2014.
-Outstanding Undergraduate Graduate.
-Top 10 Campus Singers (26th Edition), Harbin Institute of Technology.
+- Silver Award, “CCB Cup” China International College Students’ Innovation Competition, 2025.
+- National Scholarship (Ph.D.), Ministry of Education of P.R. China, 2024.
+- Harbin Institute of Technology Outstanding Student (Moral Cultivation & Virtue) Award, 2024.
+- National Scholarship (M.S.), Ministry of Education of P.R. China, 2020.
+- National Encouragement Scholarship, Ministry of Education of P.R. China, 2016.
+- National Encouragement Scholarship, Ministry of Education of P.R. China, 2015.
+- National Encouragement Scholarship, Ministry of Education of P.R. China, 2014.
+- Outstanding Student Award (University Level).
+- Outstanding Undergraduate Graduate.
+- Top 10 Campus Singers (26th Edition), Harbin Institute of Technology.
+
+
